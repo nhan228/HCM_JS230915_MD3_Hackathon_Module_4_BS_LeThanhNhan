@@ -1,0 +1,149 @@
+.box {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    .container {
+        background-color: #eee;
+        color: #fff;
+        padding: 10px;
+        .todo-box {
+            background-color: #ef5366;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 2px;
+            .todo-title {
+                padding: 20px;
+                h2 {
+                    font-weight: 400;
+                    font-size: 35px;
+                    margin: 0;
+                    letter-spacing: 2px;
+                }
+                p {
+                    font-size: 10px;
+                    margin: 0;
+                    margin-top: 5px;
+                    color: #f8cfd0;
+                    letter-spacing: 1px;
+                }
+                hr {
+                    border: 1px solid #f3979a;
+                }
+            }
+            .todo-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .todo-item {
+                    background-color: #f26675;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 30px;
+                }
+                .task-name {
+                }
+                .action {
+                    input {
+                        cursor: pointer;
+                    }
+                    i {
+                        cursor: pointer;
+                    }
+                }
+                .move-group {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    padding-right: 30px;
+                    span {
+                        color: #f8cfd0;
+                        font-size: 10px;
+                        letter-spacing: 1px;
+                        margin-right: 5px;
+                    }
+                    .switch {
+                        font-size: 10px;
+                        position: relative;
+                        display: inline-block;
+                        width: 4em;
+                        height: 2em;
+                    }
+
+                    .switch input {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+
+                    .slider {
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: #eee;
+                        transition: 0.4s;
+                        border-radius: 30px;
+                    }
+
+                    .slider:before {
+                        position: absolute;
+                        content: "";
+                        height: 1.4em;
+                        width: 1.4em;
+                        border-radius: 20px;
+                        left: 0.3em;
+                        bottom: 0.3em;
+                        background-color: #f3b3b4;
+                        transition: 0.4s;
+                    }
+
+                    .switch input:checked + .slider {
+                        background-color: #f3b3b4;
+                    }
+
+                    .switch input:focus + .slider {
+                        box-shadow: inset 3px 2px 4px rgba(22, 22, 22, 0.253);
+                    }
+
+                    .switch input:checked + .slider:before {
+                        transform: translatex(1.5em);
+                        background-color:#fff
+                    }
+                }
+            }
+            .todo-add {
+                padding: 20px;
+                p {
+                    margin: 0;
+                    margin-bottom: 5px;
+                    letter-spacing: 0;
+                }
+                form {
+                    input {
+                        background-color: #fff;
+                        border: none;
+                        height: 30px;
+                        padding-left: 20px;
+                        &:focus {
+                            box-shadow: #f3b3b4;
+                        }
+                    }
+                    button {
+                        margin-left: 1px;
+                        height: 32px;
+                        padding: 10px;
+                        
+                        cursor: pointer;
+                        background-color: #f57080;
+                        color: #fff;
+                        font-size: 10px;
+                        border: 1px solid #fc8e99;
+                    }
+                }
+            }
+        }
+    }
+}
